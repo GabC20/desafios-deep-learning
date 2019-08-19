@@ -16,12 +16,6 @@ Além de nossos três produtos principais, KeyApp, InSight Now e a plataforma Pr
 
 ---
 
-
-CHALLENGE
-
-
----
-
 Your mission is to build an image classification model that can differentiate between two
 different airlines of your choosing, given an image of an aircraft (for example, differentiate
 between Azul and Gol), using any of the following frameworks: Tensorflow, PyTorch or Keras.
@@ -40,12 +34,24 @@ accuracy without overfitting your model (eg. transfer learning).
 Best of luck!
 AI Dev Team at CyberLabs
 
-##### You must submit:
-1. A Git repo containing:
-  * A well documented training script for your model outlining the training process (model architecture used, image augmentation     used, image preprocessing etc.)
-  * Demo script showing your results
-  * A README file with the requirements and instructions on how to execute your code as well as an explanation of the developing process
-2. The dataset used for training your model (can be submitted to any storage service eg:
-Google Drive, DropBox etc)
-Submit completed mission to: ​missions@cyberlabs.ai
-For any doubts or clarifications on the mission, you can always email us above.
+---
+
+## Como participar do desafio? 🔥
+
+Antes de iniciar os passos necessários para realizar o desafio, tenha em mente que você deverá seguir todos os requisitos do mesmo. Sejam eles relacionados a stacks, metolodigas, formas de entrega, escrita de código ou qualquer outro requisito descrito no conteúdo do desafio.
+
+1. Dê um fork neste repositório.
+2. Clone o fork na sua máquina.
+3. Escreva seu programa utilizando estritamente todos os requisitos listados pelo desafio. É muito importante você ter em mente qua avaliaremos seus commits no Git, então, não esqueça de realizar um commit a cada vitória conquistada!
+4. Seu repositório deverá conter um `README.md` descrevendo os passos para treinar seu dataset e rodar seu programa, descrevendo também como foi o seu processo de treinamento, a arquitetura usada no modelo e quais técnicas foram usadas para ampliar e processar a imagem. Da mesma forma, deverá conter um script de demo do código e as instruções necessárias para a execução do mesmo.
+ > O dataset usado para o treinamento do modelo poderá ser enviado para qualquer serviço de compartilhamento em nuvem como Google Drive, Dropbox ou similares e o link para download deverá ser relacionado no arquivo `README.md`.
+5. Assim que testar tudo e validar que tudo funciona, faça seu último commit com o título 'Finalização do desafio de {{Área}} da Cyberlabs'.
+6. Abra uma issue neste repositório com o título '[DESAFIO] {{Seu nome}} - {{Sua cidade}}'.
+7. No conteúdo da issue faça um breve resumo sobre você, uma mini-bio bem simples mesmo, falando algo que possa chamar nossa atenção, pode ser um hobbie, experiências profissionais passadas, acontecimentos e curiosidades sobre o decorrer do desafio ou qualquer coisa extra que você gostaria de compartilhar conosco. Isso é muito importante para que nós possamos aprender um pouco mais sobre você.
+8. Na sequência da sua bio, coloque o link do seu fork aqui do github com o código que você gerou. Aproveite também para nos enviar seu LinkedIn e se quiser, seu e-mail, além de outras formas de contato, como suas redes sociais por exemplo.
+
+Assim que sua issue for aberta, algum membro da [Cyberlabs](https://cyberlabs.ai) entrará em contato com você diretamente e após analisar seu desafio, te dará um feedback transparente sobre ele e te encaminhará para os próximos passos, se for o caso.
+
+Lembre-se, quanto mais informações tivermos sobre você, melhor conseguiremos te avaliar.
+
+Mande seu desafio e **boa sorte**! 🤘
