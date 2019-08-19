@@ -42,11 +42,9 @@ AI Dev Team at CyberLabs
 
 ##### You must submit:
 1. A Git repo containing:
-1.1  A well documented training script for your model outlining the training process (model architecture used, image augmentation used, image preprocessing etc.)
-1.2 Demo script showing your results
-1.3 A README file with the requirements and instructions on how to execute your code
-as well as an explanation of the developing process
-
+  * A well documented training script for your model outlining the training process (model architecture used, image augmentation     used, image preprocessing etc.)
+  * Demo script showing your results
+  * A README file with the requirements and instructions on how to execute your code as well as an explanation of the developing process
 2. The dataset used for training your model (can be submitted to any storage service eg:
 Google Drive, DropBox etc)
 Submit completed mission to: ​missions@cyberlabs.ai
