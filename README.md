@@ -17,7 +17,7 @@ Além de nossos três produtos principais, KeyApp, InSight Now e a plataforma Pr
 ---
 
 
-DESAFIO
+CHALLENGE
 
 
 ---
@@ -28,6 +28,7 @@ between Azul and Gol), using any of the following frameworks: Tensorflow, PyTorc
 
 For example, given the input image:
 
+![alt text](https://github.com/cyberlabsai/desafios-deep-learning/blob/master/images/klm.jpg)
 Your code should output the company name, in this case KLM
 
 For collecting and cleaning your dataset we recommend you scrape from www.airliners.net
