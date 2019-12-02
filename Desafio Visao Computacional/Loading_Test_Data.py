@@ -66,6 +66,26 @@ print(X_testing.shape)
 print(y_testing.shape)
 
 
+# Salvando os vetores de dados
+
+pickle_out = open("X_testing.pickle", "wb")
+pickle.dump(X_testing, pickle_out)
+pickle_out.close()
+
+pickle_out = open("y_testing.pickle", "wb")
+pickle.dump(y_testing, pickle_out)
+pickle_out.close()
+
+# Testando se o armazenamento e o salvamento foram corretos
+
+pickle_in = open("X_testing.pickle", "rb")
+X_testing = pickle.load(pickle_in)
+
+print(len(X_testing))
+print(X_testing.shape)
+print(len(y_testing))
+print(y_testing.shape)
+print(X_testing[0])
 
 
 
