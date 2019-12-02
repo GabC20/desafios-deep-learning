@@ -38,3 +38,27 @@ def create_training_data():
             
 create_training_data()
 
+
+# Testando o tamanho do conjunto de dados
+
+print(len(training_data))
+
+
+# Colocando todas as imagens do Train Dataset em ordem aleatória
+
+random.shuffle(training_data)
+
+# Conferindo a nova ordem aleatória
+
+for sample in training_data[:10]:
+    print(sample[1])
+
+
+
+
+
+
+
+
+
+
