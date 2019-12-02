@@ -89,6 +89,12 @@ X_training = pickle.load(pickle_in)
 print(X_training[1])
 
 
+# testando se X_training e y_training tem o mesmo tamanho
+
+print(len(X_training))
+print(len(y_training))
+
+
 
 
 
