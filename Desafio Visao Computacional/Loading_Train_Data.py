@@ -11,3 +11,23 @@ import os
 import cv2
 import random
 import pickle
+
+
+# Definindo diretórios que contém as imagens e as classes
+
+TRAIN_DATADIR = "D:\Coisas\Desafio CyberLabs\Desafio Visao Computacional\Train_Data"
+CATEGORIES = ["AZUL", "GOL"]
+
+
+# Teste para verificar se foi possível achar o caminho especificado
+
+for category in CATEGORIES:
+    path = os.path.join(TRAIN_DATADIR, category)  # path to GreenRed or RedGreen dir
+    for img in os.listdir(path):
+        img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_COLOR)
+        plt.imshow(img_array, cmap = "gray")
+        plt.show()
+        break
+    break
+
+
