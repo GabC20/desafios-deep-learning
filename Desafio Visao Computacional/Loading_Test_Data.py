@@ -32,6 +32,9 @@ for category in CATEGORIES:
     break
 
 
+# Conferindo se a imagem foi transformada em vetor e verificando
+
+print(img_array.shape)
 
 
 
