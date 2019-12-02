@@ -19,28 +19,22 @@ TRAIN_DATADIR = "D:\Coisas\Desafio CyberLabs\Desafio Visao Computacional\Train_D
 CATEGORIES = ["AZUL", "GOL"]
 IMG_SIZE = 64
 
-# Teste para verificar se foi possível achar o caminho especificado
 
-for category in CATEGORIES:
-    # caminho para os diretórios com as imagens da AZUL e da GOL
-    path = os.path.join(TRAIN_DATADIR, category)  
-    for img in os.listdir(path):
-        img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_COLOR)
-        plt.imshow(img_array, cmap = "gray")
-        plt.show()
-        break
-    break
+# Processamento das imagens das classes
 
+training_data = []
 
-# Conferindo se a imagem foi vetorizada e conferindo suas as dimensões 
-
-print(img_array)
-print(img_array.shape)
-
-
-# Testando o redimensionamento da imagem
-
-new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
-plt.imshow(new_array, cmap = "gray")
-plt.show()
+def create_training_data():
+    for category in CATEGORIES:
+        path = os.path.join(TRAIN_DATADIR, category)  # Caminho para os diretórios com as imagens da AZUL e da GOL
+        class_num = CATEGORIES.index(category)
+        for img in os.listdir(path):
+            try:
+                img_array = cv2.imread(os.path.join(path, img))
+                new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+                training_data.append([new_array, class_num])
+            except Exception as e:
+                pass
+            
+create_training_data()
 
