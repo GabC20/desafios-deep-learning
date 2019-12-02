@@ -29,16 +29,14 @@ def process_testing_data():
         path = os.path.join(TEST_DATADIR, category)
         class_num = CATEGORIES.index(category)
         for img in os.listdir(path):
-            img_array = cv2.imread(os.path.join(path,img))
-            new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
-            testing_data.append([new_array, class_num])
+            try:
+                img_array = cv2.imread(os.path.join(path,img))
+                new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+                testing_data.append([new_array, class_num])
+            except Exception as e:
+                pass
             
 process_testing_data()
-
-
-# Verificando se o conjunto de testes tem o tamanho certo
-
-print(len(testing_data))
 
 
 ### Não é necessário colocar as imagens em ordem aleatória já que apenas precisamos classificar essas imagens 
@@ -61,11 +59,6 @@ X_testing = np.array(X_testing).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 y_testing = np.array(y_testing)
 
 
-# Testando para verificar se X_testing e y_testing estão nos formatos corretos
-print(X_testing.shape)
-print(y_testing.shape)
-
-
 # Salvando os vetores de dados
 
 pickle_out = open("X_testing.pickle", "wb")
@@ -76,16 +69,6 @@ pickle_out = open("y_testing.pickle", "wb")
 pickle.dump(y_testing, pickle_out)
 pickle_out.close()
 
-# Testando se o armazenamento e o salvamento foram corretos
-
-pickle_in = open("X_testing.pickle", "rb")
-X_testing = pickle.load(pickle_in)
-
-print(len(X_testing))
-print(X_testing.shape)
-print(len(y_testing))
-print(y_testing.shape)
-print(X_testing[0])
 
 
 
