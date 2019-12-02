@@ -51,18 +51,44 @@ random.shuffle(training_data)
 
 # Criando vetores para armazenar para armazenar as imagens vetorizadas e suas classificações (como AZUL  ou GOL) 
 
-X_train = []
-y_train = []
+X_training = []
+y_training = []
 
 for features, label in training_data:
-    X_train.append(features)
-    y_train.append(label)
+    X_training.append(features)
+    y_training.append(label)
  
     
 # Transformando os vetores X_train e y_train em vetores numpy 
     
-X_train = np.array(X_train).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
-y_train = np.array(y_train)
+X_training = np.array(X_training).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
+y_training = np.array(y_training)
+
+
+# Testando a conversão
+
+print(X_training[0])
+
+
+# Salvando os vetores de dados 
+
+pickle_out = open("X_training.pickle", "wb")
+pickle.dump(X_training, pickle_out)
+pickle_out.close()
+
+pickle_out = open("y_training.pickle", "wb")
+pickle.dump(y_training, pickle_out)
+pickle_out.close()
+
+
+# Testando se os vetores ficaram salvos com sucesso
+
+pickle_in = open("X_training.pickle", "rb")
+X_training = pickle.load(pickle_in)
+
+print(X_training[1])
+
+
 
 
 
