@@ -22,7 +22,8 @@ CATEGORIES = ["AZUL", "GOL"]
 # Teste para verificar se foi possível achar o caminho especificado
 
 for category in CATEGORIES:
-    path = os.path.join(TRAIN_DATADIR, category)  # path to GreenRed or RedGreen dir
+    # caminho para os diretórios com as imagens da AZUL e da GOL
+    path = os.path.join(TRAIN_DATADIR, category)  
     for img in os.listdir(path):
         img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_COLOR)
         plt.imshow(img_array, cmap = "gray")
