@@ -32,3 +32,11 @@ for category in CATEGORIES:
     break
 
 
+# Conferindo se a imagem foi vetorizada e conferindo suas as dimensões 
+
+print(img_array)
+print(img_array.shape)
+
+
+
+
