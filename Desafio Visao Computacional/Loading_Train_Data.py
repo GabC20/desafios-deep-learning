@@ -39,11 +39,6 @@ def create_training_data():
 create_training_data()
 
 
-# Testando o tamanho do conjunto de dados
-
-print(len(training_data))
-
-
 # Colocando todas as imagens do Train Dataset em ordem aleatória
 
 random.shuffle(training_data)
@@ -65,11 +60,6 @@ X_training = np.array(X_training).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 y_training = np.array(y_training)
 
 
-# Testando a conversão
-
-print(X_training[0])
-
-
 # Salvando os vetores de dados 
 
 pickle_out = open("X_training.pickle", "wb")
@@ -81,18 +71,8 @@ pickle.dump(y_training, pickle_out)
 pickle_out.close()
 
 
-# Testando se os vetores ficaram salvos com sucesso
-
-pickle_in = open("X_training.pickle", "rb")
-X_training = pickle.load(pickle_in)
-
-print(X_training[1])
 
 
-# testando se X_training e y_training tem o mesmo tamanho
-
-print(len(X_training))
-print(len(y_training))
 
 
 
