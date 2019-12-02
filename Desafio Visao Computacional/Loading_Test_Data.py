@@ -37,6 +37,13 @@ for category in CATEGORIES:
 print(img_array.shape)
 
 
+# Redimensionando imagem
+
+new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+plt.imshow(new_array, cmap="gray")
+plt.show()
+
+
 
 
 
