@@ -36,6 +36,37 @@ def process_testing_data():
 process_testing_data()
 
 
+# Verificando se o conjunto de testes tem o tamanho certo
+
+print(len(testing_data))
+
+
+### Não é necessário colocar as imagens em ordem aleatória já que apenas precisamos classificar essas imagens 
+
+
+# Criando vetores para armazenar para armazenar as imagens vetorizadas e suas classificações (como AZUL  ou GOL)
+
+X_testing = []
+y_testing = []
+
+
+for features, label in testing_data:
+    X_testing.append(features)
+    y_testing.append(label)
+    
+    
+# Transformando os vetores X_train e y_train em vetores numpy
+    
+X_testing = np.array(X_testing).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
+y_testing = np.array(y_testing)
+
+
+# Testando para verificar se X_testing e y_testing estão nos formatos corretos
+print(X_testing.shape)
+print(y_testing.shape)
+
+
+
 
 
 
