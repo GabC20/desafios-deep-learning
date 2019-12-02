@@ -48,11 +48,21 @@ print(len(training_data))
 
 random.shuffle(training_data)
 
-# Conferindo a nova ordem aleatória
 
-for sample in training_data[:10]:
-    print(sample[1])
+# Criando vetores para armazenar para armazenar as imagens vetorizadas e suas classificações (como AZUL  ou GOL) 
 
+X_train = []
+y_train = []
+
+for features, label in training_data:
+    X_train.append(features)
+    y_train.append(label)
+ 
+    
+# Transformando os vetores X_train e y_train em vetores numpy 
+    
+X_train = np.array(X_train).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
+y_train = np.array(y_train)
 
 
 
