@@ -20,28 +20,20 @@ CATEGORIES = ["AZUL", "GOL"]
 IMG_SIZE = 64
 
 
-# Testando imagens do conjunto de teste
+# Processamento das imagens das classes
 
-for category in CATEGORIES:
-    path = os.path.join(TEST_DATADIR, category)
-    for img in os.listdir(path):
-        img_array = cv2.imread(os.path.join(path,img), cv2.IMREAD_COLOR)
-        plt.imshow(img_array, cmap="gray")
-        plt.show()
-        break
-    break
+testing_data = []
 
-
-# Conferindo se a imagem foi transformada em vetor e verificando
-
-print(img_array.shape)
-
-
-# Redimensionando imagem
-
-new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
-plt.imshow(new_array, cmap="gray")
-plt.show()
+def process_testing_data():
+    for category in CATEGORIES:
+        path = os.path.join(TEST_DATADIR, category)
+        class_num = CATEGORIES.index(category)
+        for img in os.listdir(path):
+            img_array = cv2.imread(os.path.join(path,img))
+            new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+            testing_data.append([new_array, class_num])
+            
+process_testing_data()
 
 
 
