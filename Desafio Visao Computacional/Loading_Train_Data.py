@@ -17,7 +17,7 @@ import pickle
 
 TRAIN_DATADIR = "D:\Coisas\Desafio CyberLabs\Desafio Visao Computacional\Train_Data"
 CATEGORIES = ["AZUL", "GOL"]
-
+IMG_SIZE = 64
 
 # Teste para verificar se foi possível achar o caminho especificado
 
@@ -38,5 +38,9 @@ print(img_array)
 print(img_array.shape)
 
 
+# Testando o redimensionamento da imagem
 
+new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+plt.imshow(new_array, cmap = "gray")
+plt.show()
 
