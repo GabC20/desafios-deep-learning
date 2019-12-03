@@ -22,14 +22,14 @@ IMG_SIZE = 64
 
 # Definindo a função que redimensiona a imagem e a salva como vetor
 
-def process_testing_data():
+def process_real_data():
     path = REAL_DATADIR
     for img in os.listdir(path):
         img_array = cv2.imread(os.path.join(path,img))
         new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
         real_data.append([new_array])
             
-process_testing_data()
+process_real_data()
 
 
 # Colocando as informações de valores de pixel no vetor X_real e normalizando
