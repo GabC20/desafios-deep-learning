@@ -66,7 +66,9 @@ model.compile(loss = "binary_crossentropy",
 
 history = model.fit(X_training, y_training, validation_split=0.25, epochs=100, batch_size=16, verbose=1)
 
+
 # Plota valores de training e validation accuracy 
+
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
 plt.title('Model accuracy')
@@ -75,7 +77,9 @@ plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 
+
 # Plota valores de training e validation loss
+
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.title('Model loss')
@@ -85,7 +89,9 @@ plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 
 
+# Salvando o modelo
 
+model.save("Alt Conv Net Desafio CyberLabs")
 
 
 
