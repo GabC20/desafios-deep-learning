@@ -6,7 +6,7 @@
 
 Primeiramente, para começar o desafio foi preciso encontrar imagens de aeronaves das duas companhias aéreas escolhidas para o desafio, no caso, Azul e Gol. 
 
-O processo precisou ser bastante cuidadoso já que o site apresentado como fonte de dados possuía um número considerável de imagens de companhias aéreas distintas das pesquisadas(por exemplo, quando era pesquisada Gol, apareciam algumas imagens da WebJet e quando era pesquisada Azul, apareciam imagens da JetBlue) além de imagens inadequadas para o treinamento do modelo como por exemplo imagens do interior do avião.
+O processo precisou ser bastante cuidadoso já que o site apresentado como fonte de dados possuía um número considerável de imagens de companhias aéreas distintas das pesquisadas (por exemplo, quando era pesquisada Gol, apareciam algumas imagens da WebJet e quando era pesquisada Azul, apareciam imagens da JetBlue) além de imagens inadequadas para o treinamento do modelo como por exemplo imagens do interior do avião.
 
 Os critérios para a seleção dos dados foram:
 
