@@ -45,7 +45,7 @@ X_real = X_real/255.
 
 # carregando o modelo
 
-model = tf.keras.models.load_model("Alt Conv Net Desafio CyberLabs")
+model = tf.keras.models.load_model("Conv Net Desafio CyberLabs")
 
 
 # Carregando a predição do modelo para esse conjutno de imagens

@@ -9,7 +9,7 @@ import tensorflow as tf
 import pickle
 
 
-model = tf.keras.models.load_model("Alt Conv Net Desafio CyberLabs")
+model = tf.keras.models.load_model("Conv Net Desafio CyberLabs")
 
 # Carregando os dados dos dados de teste
 
@@ -34,5 +34,4 @@ model.evaluate(x=X_testing, y=y_testing, batch_size=32, verbose=0, sample_weight
 print(model.evaluate(x=X_testing, y=y_testing, batch_size=32, verbose=0, sample_weight=None, steps=None, callbacks=None, max_queue_size=10, workers=1, use_multiprocessing=False))
 
 
-print(model.predict(X_testing, batch_size=None, verbose=0, steps=None, callbacks=None, max_queue_size=10, workers=1, use_multiprocessing=False))
 

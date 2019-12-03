@@ -91,7 +91,7 @@ plt.show()
 
 # Salvando o modelo
 
-model.save("Alt Conv Net Desafio CyberLabs")
+model.save("Conv Net Desafio CyberLabs")
 
 
 
